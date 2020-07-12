@@ -21,6 +21,6 @@ class UserAdmin(UserAdmin):
                 )
             },
         ),
-        (_('Permissions'), {'fields': ('is_active', 'is_staff', 'is_superuser')}),
+        (_('Permissions'), {'fields': ('role', 'is_active', 'is_staff', 'is_superuser', 'groups')}),
         (_('Important dates'), {'fields': ('last_login', 'date_joined')}),
     )

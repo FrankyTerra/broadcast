@@ -11,3 +11,13 @@ class EventTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = EventType
         fields = ('id', 'name', 'description')
+
+
+class EventTypeChoiceSerializer(serializers.ModelSerializer):
+    """
+    Сериализатор Типа события
+    """
+
+    class Meta:
+        model = EventType
+        fields = ('id', 'name')

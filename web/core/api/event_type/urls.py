@@ -6,7 +6,7 @@ from drf_yasg.views import get_schema_view
 from rest_framework.permissions import IsAdminUser
 from rest_framework.routers import SimpleRouter
 
-from core.api.event_type.views import EventTypeViewSet
+from core.api.event_type.views import EventTypeViewSet, EventTypeChoiceView
 
 app_name = 'event_type'
 
@@ -27,4 +27,5 @@ urlpatterns = [
     path('docs/', schema_view.with_ui('swagger', cache_timeout=0)),
     path('docs/redoc/', schema_view.with_ui('redoc', cache_timeout=0)),
     *router.urls,
+    path('choices/event_type/', EventTypeChoiceView.as_view()),
 ]
